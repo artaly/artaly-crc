@@ -4,12 +4,12 @@ import Home from './components/home/Home';
 
 function App() {
   return (
-    <div className='container'>
+    <>
       <Header/>
       <main className='main'>
         <Home/>
       </main>
-    </div>
+    </>
   );
 }
 

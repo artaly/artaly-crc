@@ -14,28 +14,28 @@ const Header = () => {
                         <li className="nav__item">
                             <a href="#about" className="nav__link active-link">
                                 
-                                <span className="li__number">01. </span>About
+                                <span className="li__number">01. </span>&nbsp;About
                             </a>
                         </li>
                         <li className="nav__item">
                             <a href="#edu" className="nav__link">
-                                <span className="li__number">02. </span>Education
+                                <span className="li__number">02. </span>&nbsp;Education
                             </a>
                         </li>
                         <li className="nav__item">
                             <a href="#exp" className="nav__link">
-                                <span className="li__number">03. </span>Experience
+                                <span className="li__number">03. </span>&nbsp;Experience
                             </a>
                         </li>
                         <li className="nav__item">
                             <a href="#skills" className="nav__link">
-                                <span className="li__number">04. </span>Skills
+                                <span className="li__number">04. </span>&nbsp;Skills
                             </a>
                             
                         </li>
                         <li className="nav__item">
                             <a href="#certs" className="nav__link">
-                                <span className="li__number">05. </span>Certifications
+                                <span className="li__number">05. </span>&nbsp;Certifications
                             </a>
                         </li>
                     </ul>

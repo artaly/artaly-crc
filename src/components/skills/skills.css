@@ -1,0 +1,25 @@
+.skills .skillz {
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 630px) {
+    .skills .skillz {
+        flex-wrap: wrap;
+   }
+}
+@media screen and (max-width: 630px) {
+    .skills .skillz__category {
+        width: 47%;
+        margin-right: 5px;
+        margin-bottom: 25px;
+   }
+}
+.skills .skillz__category__label {
+    font-weight: 700;
+    color: #36363c;
+    text-transform: uppercase;
+}
+.skills .skillz__category__item {
+    margin: 3px 0;
+    font-size: 0.9rem;
+}

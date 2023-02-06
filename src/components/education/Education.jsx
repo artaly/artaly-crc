@@ -14,7 +14,7 @@ const Education = () => {
                     </div>
                     <div class="job__time">June 2019 - Present</div>
                     </div>
-                    <div class="job__position">C.M. Recto Avenue, Brgy. 6,Lipa City, Batangas Philippines 4217</div>
+                    <div class="job__position">C.M. Recto Avenue, Brgy. 6, Lipa City, Batangas</div>
                 </div>
 
                 <div class="job">
@@ -24,7 +24,7 @@ const Education = () => {
                     </div>
                     <div class="job__time">June 2019 - June 2020</div>
                     </div>
-                    <div class="job__position">C.M. Recto Avenue, Brgy. 6,Lipa City, Batangas Philippines 4217</div>
+                    <div class="job__position">865 National Road, Kumintang Ibaba, Batangas City, Batangas</div>
                 </div>
             
             </div>

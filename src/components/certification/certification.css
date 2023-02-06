@@ -1,0 +1,34 @@
+.certification .certs {
+    margin-bottom: 100px;
+}
+.certification .cert {
+    margin-bottom: 25px;
+}
+.certification .cert .time-name {
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width: 480px) {
+    .certification .cert .time-name {
+        display: block;
+   }
+}
+.certification .cert__name {
+    font-weight: 700;
+}
+.certification .cert__time {
+    font-size: 0.9rem;
+    font-family: 'Inconsolata', monospace;
+}
+@media screen and (max-width: 480px) {
+    .certification .cert__time {
+        font-size: 0.8rem;
+   }
+}
+.certification .arrow-link {
+    font-size: 1.25rem;
+}
+.certification .arrow-link:after {
+    width: 20px;
+    height: 20px;
+}

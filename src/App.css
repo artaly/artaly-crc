@@ -8,10 +8,12 @@
   /* COLORS */
   --hue: 0;
   --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
+  --title-color: #4D4B3B;
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
+  --text-color: #60473E;
   --body-color: hsl(var(--hue), var(--sat), 98%);
+
+  --background-color: #E6E8E9;
   --container-color: #fff;
 
   /* FONTS AND TYPOGRAPHY */
@@ -61,6 +63,17 @@
   }
 }
 
+@font-face {
+  font-family: 'Apercu';
+  src: url('./assets/fonts/ApercuLight.eot');
+  src: url('./assets/fonts/ApercuLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('./assets/fonts/ApercuLight.woff') format('woff'),
+    url('./assets/fonts/ApercuLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+
 /* BASE */
 * {
   margin: 0;
@@ -81,7 +94,7 @@ textarea {
 }
 
 body {
-  background-color: var(--body-color);
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
@@ -98,7 +111,13 @@ ul {
 
 a {
   text-decoration: none;
+  color: #60473E;
 }
+
+a:visited {
+  text-decoration: none;
+}
+
 
 button {
   cursor: pointer;
@@ -215,7 +234,7 @@ img {
   align-items: center;
 }
 
-/* BREAKPOINTS */
+/* BREAKPOINTS
 /* For large devices */
 @media screen and (max-width: 992px) {
   .container {
@@ -234,7 +253,7 @@ img {
 }
 
 /* For medium devices */
-@media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) {
   body {
     margin: 0 0 var(--header-height) 0;
   }
@@ -254,7 +273,7 @@ img {
 }
 
 @media screen and (max-width: 576px) {
-}
+} 
 
 /* For small devices */
 @media screen and (max-width: 350px) {

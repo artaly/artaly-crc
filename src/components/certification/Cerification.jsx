@@ -4,7 +4,7 @@ import './certification.css'
 const Cerification = () => {
   return (
     <section class="section certification" id='certs'>
-        <div class="section__title">05. Certifications</div>
+        <div class="section__title">05. Certs</div>
         <div class="section__content">
             <div class="certs">
                 <div class="cert">

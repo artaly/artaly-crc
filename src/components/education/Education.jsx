@@ -4,7 +4,7 @@ import './education.css'
 const Education = () => {
   return (
     <section class="section education" id='edu'>
-        <div class="section__title">02. Education</div>
+        <div class="section__title">02. Educ</div>
         <div class="section__content">
             <div class="jobs">
                 <div class="job">

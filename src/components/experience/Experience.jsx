@@ -14,7 +14,7 @@ const Experience = () => {
                 </div>
                 <div class="job__time">February 2023 - Present</div>
               </div>
-              <div class="job__position">Intern</div>
+              <div class="job__position">Software Engineer Intern</div>
             </div>
 
             <div class="job">

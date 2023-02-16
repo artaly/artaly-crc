@@ -9,7 +9,7 @@ const About = () => {
           <p>
             I'm a graduating college student from the Philippines with a strong interest in anything DevOps and cloud computing related.
             Currently, I'm interning at 
-            <a class="underline-link" href="dewise.com/" target="_blank">&nbsp;Dewise</a>
+            <a class="underline-link" href="dewise.com/" target="_blank" rel="noopener">&nbsp;Dewise</a>
             as a Clound Engineer intern where I get to work with technologies such as AWS, Azure, Azure DevOps, Docker, and Terraform. 
           </p>
           <p>

@@ -10,7 +10,7 @@ const Experience = () => {
             <div class="job">
               <div class="time-place">
                 <div class="job__company">
-                  <a href="https://www.dewise.com/" target="_blank">Dewise</a>
+                  <a href="https://www.dewise.com/" target="_blank" rel="noopener">Dewise</a>
                 </div>
                 <div class="job__time">February 2023 - Present</div>
               </div>
@@ -20,7 +20,7 @@ const Experience = () => {
             <div class="job">
               <div class="time-place">
                 <div class="job__company">
-                  <a href="https://johnsonsberkshire.com/" target="_blank">Johnson's Berkshire Solutions Inc.</a>
+                  <a href="https://johnsonsberkshire.com/" target="_blank" rel="noopener">Johnson's Berkshire Solutions Inc.</a>
                 </div>
                 <div class="job__time">May 2021 - August 2021</div>
               </div>

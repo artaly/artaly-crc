@@ -13,19 +13,20 @@ const Footer = () => {
                     <a
                     href="https://github.com/bchiang7"
                     target="_blank"
+                    rel="noopener"
                     class="underline-link">Brittany Chiang</a>
                 </span>
                 <span>&nbsp;2018</span>
                 </div>
             </div>
             <div class="footer__links">
-                <a href="mailto:villalonalycahgmail.com" target="_blank" title="EMAIL">
+                <a href="mailto:villalonalycahgmail.com" target="_blank" rel="noopener" title="EMAIL">
                 <span class="text">EMAIL</span>
                 </a>
-                <a href="https://www.linkedin.com/in/alycahvillalon/" target="_blank" title="LINKEDIN">
+                <a href="https://www.linkedin.com/in/alycahvillalon/" target="_blank" title="LINKEDIN" rel="noopener">
                 <span class="text">LINKEDIN</span>
                 </a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" title="GITHUB">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" title="GITHUB" rel="noopener">
                 <span class="text">GITHUB</span>
                 </a>
             </div>    

@@ -1,0 +1,24 @@
+deploy:
+  needs: [test]
+  runs-on: ubuntu-latest
+
+  steps:
+  - name: Checkout source code
+    uses: actions/checkout@v3
+
+  - name: Generate deployment package
+    run: zip -r deploy.zip . -x '*.git*'
+
+  - name: Deploy to Elastic Beanstalk
+    uses: einaregilsson/beanstalk-deploy@v20
+    with: 
+
+      aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      application_name: artaly-crc-github-actions-aws
+      environment_name: Artalycrcgithubactionsaws-env
+
+      version_label: 12348
+      region: "us-east-2"
+      deployment_package: deploy.zip

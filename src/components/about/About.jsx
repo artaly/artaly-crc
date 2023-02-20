@@ -19,7 +19,7 @@ const About = () => {
           </p>
 
           <p>
-            <span className='bold-this'>When I'm not doing IT stuff</span>, I read manga/books, watch movies or series, play with my cats, or learn how to draw and paint.
+            <span className='bold-this'>When I'm not doing IT stuff</span>, I read manga/books, watch movies or series, play with my cats, or learn how to draw traditionally and paint using gouache.
           </p>
   </div>
 </section>

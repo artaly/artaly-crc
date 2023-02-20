@@ -2,7 +2,8 @@ name: Build and Test
 
 on: 
   push:
-    branches: [main]
+    # Condition for which branch to check
+    branches: [frontend && !main]
 
 jobs:
   test:

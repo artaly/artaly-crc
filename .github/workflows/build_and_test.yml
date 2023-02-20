@@ -41,5 +41,5 @@ jobs:
         environment_name: Artalycrcgithubactionsaws-env
 
         version_label: 12348
-        region: "us-east-2"
+        region: "us-east-1"
         deployment_package: deploy.zip

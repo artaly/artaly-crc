@@ -4,7 +4,7 @@ import './about.css'
 const About = () => {
   return (
     <section class="section about" id='about'>
-      <div class="section__title">01. About</div>
+      <div class="section__title">01. Aboutkek</div>
         <div class="section__content">
           <p>
             I'm a graduating college student from the Philippines with a strong interest in anything DevOps and cloud computing related.

@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Cloud Resume
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is hosted in AWS as a part of [Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/)
 
 ## Available Scripts
 

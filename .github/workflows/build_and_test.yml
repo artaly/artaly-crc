@@ -42,5 +42,6 @@ jobs:
 
         region: "us-east-1"
         deployment_package: deploy.zip
-        version_label: "version-label-${{ steps.format-time.outputs.replaced }}"
+        version_label: 123
+        # version_label: "version-label-${{ steps.format-time.outputs.replaced }}"
         use_existing_version_if_available: true

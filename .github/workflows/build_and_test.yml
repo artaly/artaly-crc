@@ -37,8 +37,8 @@ jobs:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-        application_name: artaly-cloud-resume
-        environment_name: artaly-cloud-resume-env
+        application_name: cloud-resume
+        environment_name: cloud-resume-env
 
         region: "us-east-1"
         deployment_package: deploy.zip

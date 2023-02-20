@@ -37,10 +37,10 @@ jobs:
         aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
-        application_name: artaly-crc-github-actions-aws
-        environment_name: Artalycrcgithubactionsaws-env
+        application_name: artaly-cloud-resume
+        environment_name: artaly-cloud-resume-env
 
         region: "us-east-1"
         deployment_package: deploy.zip
-        version_label: "version-label-${{ steps.format-time.outputs.replaced }}"
+        version_label: "v1"
         use_existing_version_if_available: true

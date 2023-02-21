@@ -2,7 +2,7 @@
 
 The [Cloud Resume Challenge](https://cloudresumechallenge.dev/docs/the-challenge/aws/) is a hands-on project designed to help  bridge the gap from cloud certification to cloud job. It incorporates many of the skills that real cloud and DevOps engineers use in their daily work. 
 
-I started this project late January and it's still ongoing.
+Status: Ongoing [Started late January)
 
 
 ## To Do
@@ -10,8 +10,8 @@ I started this project late January and it's still ongoing.
 - [x] 1. Certification
 - [x] 2. HTML
 - [x] 3. CSS
-- [ ] 4. Static Website
-- [ ] 5. HTTPS
+- [x] 4. Static Website
+- [x] 5. HTTPS
 - [ ] 6. DNS
 - [ ] 7. Javascript
 - [ ] 8. Database

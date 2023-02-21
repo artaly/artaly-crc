@@ -25,7 +25,7 @@ jobs:
       run: npm run build --if-present
 
     - name: Test
-      run: npm run-script test
+      run: npm run test:ci
 
   # deploy:
   #   needs: [test]

@@ -27,28 +27,46 @@ jobs:
     # - name: Test
     #   run: npm run test:ci
 
-  # deploy:
-  #   needs: [test]
-  #   runs-on: ubuntu-latest
+  deploy:
+    needs: [test]
+    runs-on: ubuntu-latest
+    env: 
+      BUCKET: artaly-cloud
+      DIST: build
+      REGION: us-east-1
+      DIST_ID: E395F887NV3PKK
 
-  #   steps:
-  #   - name: Checkout source code
-  #     uses: actions/checkout@v3
+    timeout-minutes: 10
 
-  #   - name: Generate deployment package
-  #     run: zip -r deploy.zip . -x '*.git*'
+    steps:
 
-  #   - name: Deploy to Elastic Beanstalk
-  #     uses: einaregilsson/beanstalk-deploy@v20
-  #     with: 
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-  #       aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #       aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with: 
+        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_region: ${{ secrets.AWS_REGION }}
 
-  #       application_name: cloud-resume
-  #       environment_name: cloud-resume-env
+    - name: Use Node.js 17.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 17.x
 
-  #       region: "us-east-1"
-  #       deployment_package: deploy.zip
-  #       version_label: "v1"
-  #       use_existing_version_if_available: true
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build static website
+      run: npm run build --if-present
+
+    - name: Copy files to the production website with the AWS CLI
+      run: |
+        aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
+
+    - name: Copy files to the production website with the AWS CLI
+      run: |
+        aws cloudfront create-invalidation \
+          --distribution-id ${{ env.DIST_ID }} \
+          --paths "/*"

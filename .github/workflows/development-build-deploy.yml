@@ -65,8 +65,8 @@ jobs:
       run: |
         aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
 
-    - name: Copy files to the production website with the AWS CLI
-      run: |
-        aws cloudfront create-invalidation \
-          --distribution-id ${{ env.DIST_ID }} \
-          --paths "/*"
+    # - name: Copy files to the production website with the AWS CLI
+    #   run: |
+    #     aws cloudfront create-invalidation \
+    #       --distribution-id ${{ env.DIST_ID }} \
+    #       --paths "/*"

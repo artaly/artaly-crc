@@ -1,0 +1,288 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* VARIABLES */
+:root {
+  --header-height: 3rem;
+
+  /* COLORS */
+  --hue: 0;
+  --sat: 0%;
+  --title-color: #4D4B3B;
+  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
+  --text-color: #60473E;
+  --body-color: hsl(var(--hue), var(--sat), 98%);
+
+  --background-color: #E6E8E9;
+  --container-color: #fff;
+
+  /* FONTS AND TYPOGRAPHY */
+  --body-font: "Poppins", sans-serif;
+
+  /* SIZES */
+  --big-font-size: 3.5rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+
+  /* WEIGHT */
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* MARGIN BOTTOM */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /* Z INDEX */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* RESPONSIVE TYPOGRAPHY */
+@media screen and (max-width: 992px) {
+  :root {
+    --big-font-size: 2.75rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  }
+}
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('./assets/fonts/ApercuLight.eot');
+  src: url('./assets/fonts/ApercuLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('./assets/fonts/ApercuLight.woff') format('woff'),
+    url('./assets/fonts/ApercuLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #60473E;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* REUSABLE CLASSES */
+.section {
+  display: flex;
+  justify-content: center;
+  padding: 100px 170px;
+}
+
+.section__title {
+  color: var(--title-color);
+  flex-shrink: 0;
+	width: 200px;
+	margin-right: 70px;
+	text-transform: uppercase;
+	text-align: right;
+	font-weight: 700;
+  font-size: 3rem;
+	letter-spacing: 2px;
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
+}
+
+.section__content {
+  font-weight: 300;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 650px;
+}
+
+.section__content p {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+.section__content .underline-link {
+  position: relative;
+  display: inline-block;
+}
+.section__content .underline-link:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #36363c;
+  content: '';
+  opacity: 0;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  transform: translateY(-5px);
+}
+.section__content .underline-link:hover:after, .section__content .underline-link:focus:after {
+  height: 2px;
+  border-radius: 3px;
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.section__title,
+.section__subtitle {
+  text-align: left;
+}
+
+/* LAYOUT */
+.container {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* BUTTONS */
+.button {
+  display: inline-block;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+}
+
+.button:hover {
+  background-color: var(--title-color-dark);
+}
+
+.button__icon {
+  margin-left: var(--mb-0-5);
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* BREAKPOINTS
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+
+  .button {
+    padding: 1rem 1.75rem;
+  }
+
+  .button__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* For medium devices */
+ @media screen and (max-width: 768px) {
+  body {
+    margin: 0 0 var(--header-height) 0;
+  }
+
+  .section {
+    display: block;
+ }
+
+  .section__subtitle {
+    margin-bottom: var(--mb-3);
+  }
+
+  .section__content {
+    padding-top: 30px;
+    padding-left: 50px;
+ }
+}
+
+@media screen and (max-width: 576px) {
+} 
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
+
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}

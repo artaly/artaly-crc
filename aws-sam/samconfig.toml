@@ -16,7 +16,11 @@ parallel = true
 [default.deploy.parameters]
 capabilities = "CAPABILITY_IAM"
 confirm_changeset = true
-resolve_s3 = true
+stack_name = "cloud-resume-challenge"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-fvqzp5uja19f"
+s3_prefix = "cloud-resume-challenge"
+region = "us-east-1"
+image_repositories = []
 
 [default.package]
 [default.package.parameters]

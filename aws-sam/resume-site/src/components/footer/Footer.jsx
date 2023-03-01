@@ -19,6 +19,11 @@ const Footer = () => {
                 <span>&nbsp;2018</span>
                 </div>
             </div>
+            <div class="footer__visitor__count">
+                <div class="top">
+                <span>Visitors: </span><span class="visitor_count">&nbsp;2018</span>
+                </div>                
+            </div>
             <div class="footer__links">
                 <a href="mailto:villalonalycahgmail.com" target="_blank" rel="noopener" title="EMAIL">
                 <span class="text">EMAIL</span>

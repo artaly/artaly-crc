@@ -4,7 +4,7 @@ const Data = () => {
   return (
     <div className='home__data'>
         <h1 className='home__title'>Alycah V.</h1>
-        <h3 className='home__subtitle'>Aspiring Cloud & DevOps Engr</h3>
+        <h3 className='home__subtitle'>Aspiring Cloud & DevOps</h3>
         <p className='home__description'>A college senior based in the Phillipines with strong interest in cloud computing and DevOps culture.</p>
         <a href="mailto:villalonalycahgmail.com" target="_blank" rel="noopener" title="EMAIL" className='button button--flex'>
           Get in touch

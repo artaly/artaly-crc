@@ -1,9 +1,15 @@
 import "./footer.css";
+import { Helmet } from "react-helmet"
 
+// https://102ewhf875.execute-api.us-east-1.amazonaws.com/Prod/get
 const Footer = () => {
 
     return (
-        <footer class="footer">
+        <>
+        <Helmet>
+            <script src="../../scripts/fetch" type="text/javascript" />
+        </Helmet>
+        <footer class="footer"> 
             <div class="footer__copyright">
                 <div class="top">
                 <span>Designed &amp; Design inspiration by</span>
@@ -21,7 +27,7 @@ const Footer = () => {
             </div>
             <div class="footer__visitor__count">
                 <div class="top">
-                <span>Visitors: </span><span class="visitor_count">&nbsp;2018</span>
+                <span>Visitors: </span><span id="visitor_count">&nbsp;2018</span>
                 </div>                
             </div>
             <div class="footer__links">
@@ -36,6 +42,7 @@ const Footer = () => {
                 </a>
             </div>    
         </footer>
+        </>
 
     )
 }

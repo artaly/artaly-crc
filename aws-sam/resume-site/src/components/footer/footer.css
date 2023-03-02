@@ -74,6 +74,10 @@
     transition: height 0.3s, opacity 0.3s, transform 0.3s;
     transform: translateY(-5px);
 }
+
+.footer__visitor__count {
+    font-size: 0.8rem;
+}
 @media screen and (max-width: 850px) {
     .footer__links a:after {
         display: none;

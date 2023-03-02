@@ -72,6 +72,9 @@ Resources:
   GetFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: cloud-resume-db
       CodeUri: get-function/
       Handler: get-function
       Runtime: go1.x

@@ -1,6 +1,0 @@
-name: Dev CI/CD Deploy (S3)
-
-on:
-  push:
-    branches:
-      - develop

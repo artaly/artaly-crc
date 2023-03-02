@@ -1,4 +1,4 @@
-name: Test Lamda Functions
+name: Test Lambda Functions
 
 on:
   push:

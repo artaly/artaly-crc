@@ -13,12 +13,12 @@ Status: Ongoing [Started late January)
 - [x] 4. Static Website
 - [x] 5. HTTPS
 - [ ] 6. DNS
-- [ ] 7. Javascript
-- [ ] 8. Database
-- [ ] 9. API
-- [ ] 10. Python
+- [x] 7. Javascript
+- [x] 8. Database
+- [x] 9. API
+- [x] 10. Python (I used Go)
 - [ ] 11. Tests
-- [ ] 12. IaaC
+- [x] 12. IaaC
 - [x] 13. Source Control
 - [ ] 14. CI/CD Frontend
 - [ ] 15. CI/CD Backend
@@ -26,12 +26,12 @@ Status: Ongoing [Started late January)
 ### Tech Stack
 
 * ReactJS (Will change to SvelteKit in the future)
-* Typescript
 * Amazon S3
 * Amazon CloudFront
 * DynamoDB
-* Python
-* Terraform
+* Go
+* Amazon Lambda
+* Amazon Severless Application Model
 * Github Actions
 
 

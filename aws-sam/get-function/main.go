@@ -1,13 +1,18 @@
 package main
 
 import (
-	"errors"
 	"fmt"
-	"io"
-	"net/http"
+	"log"
+
+	"errors"
 
 	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
+
+	"github.com/aws/aws-sdk-go/aws"
+	"github.com/aws/aws-sdk-go/aws/session"
+	"github.com/aws/aws-sdk-go/service/dynamodb"
+	"github.com/aws/aws-sdk-go/service/dynamodb/dynamodbattribute"
 )
 
 var (
@@ -22,22 +27,35 @@ var (
 )
 
 func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-	resp, err := http.Get(DefaultHTTPGetAddress)
+	
+	sess := session.Must(session.NewSessionWithOptions(session.Options{
+		SharedConfigState: session.SharedConfigEnable,
+	}))
+
+	svc := dynamodb.New(sess)
+
+	var input = &dynamodb.GetItemInput{
+		TableName: aws.String("cloud-resume-db"),
+		Key: map[string]*dynamodb.AttributeValue{
+			"ID": {
+				S: aws.String("visitors"),
+			},
+		},
+	}
+
+	queryOutput, err := svc.GetItem(input)
+
+	type Count struct {
+		ID string `json:"ID"`
+		Visitors string `json:"visitors"`
+	}
+
+	count := Count{}
+
+	err = dynamodbattribute.UnmarshalMap(queryOutput.Item, &count)
+
 	if err != nil {
-		return events.APIGatewayProxyResponse{}, err
-	}
-
-	if resp.StatusCode != 200 {
-		return events.APIGatewayProxyResponse{}, ErrNon200Response
-	}
-
-	ip, err := io.ReadAll(resp.Body)
-	if err != nil {
-		return events.APIGatewayProxyResponse{}, err
-	}
-
-	if len(ip) == 0 {
-		return events.APIGatewayProxyResponse{}, ErrNoIP
+		log.Fatalf("Error calling UpdateItem: %s", err)
 	}
 
 	return events.APIGatewayProxyResponse{
@@ -46,7 +64,7 @@ func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyRespo
 			"Access-Control-Allow-Methods": "*",
 			"Access-Control-Allow-Headers": "*",
 		},
-		Body:       fmt.Sprintf("{ \"count\": \"2\"}"),
+		Body: fmt.Sprintf("{ \"count\": \"%s\" }", count.Visitors),
 		StatusCode: 200,
 	}, nil
 }

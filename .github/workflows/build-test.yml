@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  test-infra:
+  test-lambda:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:

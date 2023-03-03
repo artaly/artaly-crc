@@ -50,7 +50,7 @@ jobs:
       # - name: Run test
       #   run: cd aws-sam/resume-site && npm test && cd ../../
       - name: Build
-        run: npm run build
+        run: cd aws-sam/resume-site && npm run build && cd ../../
 
   deploy-s3:
     needs: test-and-build-site

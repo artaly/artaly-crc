@@ -10,7 +10,7 @@ const Cerification = () => {
                 <div class="cert">
                     <div class="time-name">
                     <div class="cert__name">
-                        <a href="https://www.credly.com/badges/3621d9e0-40f3-486d-b67d-5791123af8ce/linked_in_profile" target="_blank" rel="noopener">AWS Certified Cloud Practitioner</a>
+                        <a href="https://www.credly.com/badges/3621d9e0-40f3-486d-b67d-5791123af8ce/linked_in_profile" target="_blank" rel="noreferrer">AWS Certified Cloud Practitioner</a>
                     </div>
                     <div class="cert__time">August 2022 - August 2025</div>
                     </div>
@@ -20,7 +20,7 @@ const Cerification = () => {
                 <div class="cert">
                     <div class="time-name">
                     <div class="cert__name">
-                        <a href="" target="_blank" rel="noopener">ACA Cloud Computing Certification</a>
+                        <a href="" target="_blank" rel="noreferrer">ACA Cloud Computing Certification</a>
                     </div>
                     <div class="cert__time">February 2022 - February 2024</div>
                     </div>

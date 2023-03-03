@@ -10,7 +10,7 @@ const Education = () => {
                 <div class="job">
                     <div class="time-place">
                     <div class="job__company">
-                        <a href="https://www.sti.edu/campuses-details.asp?campus_id=LIP" target="_blank" rel="noopener">STI College Lipa</a>
+                        <a href="https://www.sti.edu/campuses-details.asp?campus_id=LIP" target="_blank" rel="noreferrer">STI College Lipa</a>
                     </div>
                     <div class="job__time">June 2019 - Present</div>
                     </div>
@@ -20,7 +20,7 @@ const Education = () => {
                 <div class="job">
                     <div class="time-place">
                     <div class="job__company">
-                        <a href="https://www.sti.edu/campuses-details.asp?campus_id=LIP" target="_blank" rel="noopener">STI College Batangas</a>
+                        <a href="https://www.sti.edu/campuses-details.asp?campus_id=LIP" target="_blank" rel="noreferrer">STI College Batangas</a>
                     </div>
                     <div class="job__time">June 2019 - June 2020</div>
                     </div>

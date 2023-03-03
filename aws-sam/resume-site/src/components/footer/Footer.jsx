@@ -1,5 +1,4 @@
 import "./footer.css";
-import { Helmet } from "react-helmet"
 
 const Footer = () => {
 
@@ -15,7 +14,7 @@ const Footer = () => {
                     <a
                     href="https://github.com/bchiang7"
                     target="_blank"
-                    rel="noopener"
+                    rel="noreferrer"
                     class="underline-link">Brittany Chiang</a>
                 </span>
                 <span>&nbsp;2018</span>
@@ -27,13 +26,13 @@ const Footer = () => {
                 </div>                
             </div>
             <div class="footer__links">
-                <a href="mailto:villalonalycahgmail.com" target="_blank" rel="noopener" title="EMAIL">
+                <a href="mailto:villalonalycahgmail.com" target="_blank" rel="noreferrer" title="EMAIL">
                 <span class="text">EMAIL</span>
                 </a>
-                <a href="https://www.linkedin.com/in/alycahvillalon/" target="_blank" title="LINKEDIN" rel="noopener">
+                <a href="https://www.linkedin.com/in/alycahvillalon/" target="_blank" title="LINKEDIN" rel="noreferrer">
                 <span class="text">LINKEDIN</span>
                 </a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" title="GITHUB" rel="noopener">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" title="GITHUB" rel="noreferrer">
                 <span class="text">GITHUB</span>
                 </a>
             </div>    

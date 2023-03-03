@@ -46,7 +46,7 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        run: cd aws-sam/get-function && npm install && cd ../../
+        run: cd aws-sam/resume-site && npm install && cd ../../
       - name: Run test
         run: npm test 
       - name: Build

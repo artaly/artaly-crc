@@ -78,6 +78,6 @@ jobs:
       - name: Build React App
         run: cd aws-sam/resume-site && npm install && npm run build && cd ../../
       - name: Deploy app build to S3 bucket
-        run: aws s3 sync ./build/ s3://s3-cloud-challenge --delete
+        run: aws s3 sync aws-sam/resume-site/build s3://s3-cloud-challenge --delete
 
 

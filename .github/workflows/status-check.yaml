@@ -7,10 +7,17 @@ on:
     - !main
     - develop
 
-
 jobs:
   status-check:
     runs-on: ubuntu-latest
-    if: ${{ !github.event.pull_request.draft }}
+    if: ${{ !github.event.pull_request.draft && github.event.pull_request.ready_for_review }}
     steps:
     - uses: actions/checkout@v1
+    - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: cd aws-sam/resume-site && npm install && cd ../../
+      # - name: Run test
+      #   run: cd aws-sam/resume-site && npm test && cd ../../ g

@@ -47,8 +47,8 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: cd aws-sam/resume-site && npm install && cd ../../
-      # - name: Run test
-      #   run: cd aws-sam/resume-site && npm test && cd ../../ g
+      - name: Run test
+        run: cd aws-sam/resume-site && npm test && cd ../../
       - name: Build
         run: cd aws-sam/resume-site && npm run build && cd ../../
 

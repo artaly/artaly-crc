@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --watchAll",
+    "test": "react-scripts test --forceExit --detectOpenHandles",
     "test:ci": "npm run test -- --testResultsProcessor=\"jest-junit\" --watchAll=false --ci --coverage",
     "eject": "react-scripts eject",
     "deploy": "aws s3 sync build/ s3://artaly-cloud",

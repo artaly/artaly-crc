@@ -11,10 +11,11 @@ jobs:
   status-check:
     runs-on: ubuntu-latest
     if: ${{ !github.event.pull_request.draft && github.event.pull_request.ready_for_review }}
-    steps:
-      - uses: actions/checkout@v1
+    steps:  
+      - name: Checkout code
+        uses: actions/checkout@v1
       - name: Setup Node.js
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install dependencies

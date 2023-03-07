@@ -5,11 +5,12 @@ on:
     types: ['opened', 'reopened', 'synchronize', 'ready_for_review', 'review_requested']
     branches:
       - develop
+      - main
 
 jobs:
   status-check:
-    runs-on: ubuntu-latest
     if: github.event_name != 'pull_request' || !github.event.pull_request.draft
+    runs-on: ubuntu-latest
     steps:  
       - name: Checkout code
         uses: actions/checkout@v1

@@ -10,7 +10,7 @@ on:
 jobs:
   status-check:
     runs-on: ubuntu-latest
-    if: ${{ !github.event.pull_request.draft && github.event.pull_request.ready_for_review }}
+    if: github.event.pull_request.draft == false && github.event.pull_request.ready_for_review
     steps:  
       - name: Checkout code
         uses: actions/checkout@v1

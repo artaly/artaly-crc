@@ -2,15 +2,18 @@ name: Status Checker
 
 on:
   pull_request:
-    types: [ready_for_review, review_requested, synchronize]
+    types: 
+      - reopened
+      - synchronize
+      - ready_for_review
+      - review_requested
     branches:
-      - !main
       - develop
 
 jobs:
   status-check:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.draft == false && github.event.pull_request.ready_for_review
+    if: ${{ !github.event.pull_request.draft && github.event.pull_request.ready_for_review }}
     steps:  
       - name: Checkout code
         uses: actions/checkout@v1
@@ -21,4 +24,4 @@ jobs:
       - name: Install dependencies
         run: cd aws-sam/resume-site && npm install && cd ../../
       - name: Run test
-        run: cd aws-sam/resume-site && npm test && cd ../../ g
+        run: cd aws-sam/resume-site && npm test && cd ../../ 

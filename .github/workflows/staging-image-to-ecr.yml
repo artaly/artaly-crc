@@ -1,0 +1,17 @@
+name: Push container image to staging
+
+on: workflow_dispatch 
+# Should trigger on main branch. Ask if similar staging ang branch anf staging
+
+jobs:
+  prod-env:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    # - name: Configure AWS credentials 
+    #   uses: aws-actions/configure-aws-credentials
+    #   with:
+    #     role-to-assumel:
+    #     aws-region: us-east-1

@@ -1,6 +1,13 @@
 name: Push container image to staging
 
-on: workflow_dispatch 
+# on: workflow_dispatch 
+on:
+  pull_request:
+    types: 
+      - closed
+    branches:
+      - main
+
 # Should trigger on main branch. Ask if similar staging ang branch anf staging
 
 jobs:

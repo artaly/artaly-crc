@@ -15,10 +15,10 @@ FROM development AS build
 WORKDIR '/app/aws-sam/resume-site'
 RUN npm run build
 
-FROM development as dev-envs
+FROM ubuntu:18.04 as dev-envs
 RUN <<EOF
-sudo apt-get update
-sudo apt-get install -y --no-install-recommends git
+apt-get update
+apt-get install -y --no-install-recommends git
 EOF
 
 RUN <<EOF
